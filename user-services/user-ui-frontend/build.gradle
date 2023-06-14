@@ -1,0 +1,56 @@
+plugins {
+  id 'java'
+  id "com.github.node-gradle.node" version "3.0.1"
+}
+
+group = 'com.techbow.user'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+node {
+  download = false
+}
+
+task buildVueApp(type: NpxTask) {
+  dependsOn npmInstall
+  command = 'npx'
+  args = ['vue-cli-service', 'build', '--dest', 'build/generated/sources']
+  inputs.files('package.json', 'package-lock.json', 'babel.config.js')
+  inputs.dir('src')
+  inputs.dir('public')
+  inputs.dir(fileTree("node_modules").exclude(".cache"))
+  outputs.dir('build/generated/sources')
+}
+
+task cleanVueApp(type: NpxTask) {
+  command = 'npx'
+  args = ['rimraf', 'build', 'node_modules']
+}
+
+task packageVueApp(type: Zip) {
+  dependsOn buildVueApp
+  extension 'jar'
+  destinationDir file("build/libs")
+  from('build/generated/sources')
+  into('static')
+}
+
+assemble.dependsOn packageVueApp
+clean.dependsOn cleanVueApp
+
+configurations {
+  vueResources
+}
+
+configurations.runtimeOnly.extendsFrom(configurations.vueResources)
+
+artifacts {
+  vueResources(packageVueApp.archiveFile) {
+    builtBy buildVueApp
+    type 'jar'
+  }
+}
