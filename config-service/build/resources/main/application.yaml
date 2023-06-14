@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: config-service
+
+  main:
+    banner-mode: "off"
+  output:
+    ansi:
+      enabled: "ALWAYS"
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: G:/techbow/techbow_services/service-configs/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
