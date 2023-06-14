@@ -1,0 +1,98 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      filter:
+        request-rate-limiter:
+          deny-empty-key: false
+      routes:
+        - id: user-ui-service
+          uri: lb://user-ui-service
+          predicates:
+            - Path=/user-ui/**
+          filters:
+            - StripPrefix=1
+            - AddResponseHeader=X-TECHBOW-SERVER, user-ui-service
+            - name: CircuitBreaker
+              args:
+                name: user-circuit-breaker
+                fallbackUri: forward:/fallback
+        - id: user-ui-service-referer
+          uri: lb://user-ui-service
+          predicates:
+            - Header=Referer, http://localhost:8080/user-ui
+          filters:
+            - AddResponseHeader=X-TECHBOW-SERVER, user-ui
+
+        - id: user-store-service
+          uri: lb://user-store-service
+          predicates:
+            - Path=/user-store/**
+          filters:
+            - StripPrefix=1
+            - AddResponseHeader=X-TECHBOW-SERVER, user-store
+            - name: CircuitBreaker
+              args:
+                name: user-circuit-breaker
+                fallbackUri: forward:/fallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 2
+                redis-rate-limiter.requestedTokens: 1
+          metadata:
+            response-timeout: 200
+            connect-timeout: 200
+  redis:
+    host: http://localhost
+    port: 8088
+
+
+  sleuth:
+    sampler:
+      probability: 1.0
+
+  zipkin:
+    baseUrl: http://localhost:8084
+
+
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+resilience4j:
+  retry:
+    configs:
+      default:
+        maxRetryAttempts: 2
+        waitDuration: 100
+
+  bulkhead:
+    configs:
+      default:
+        maxConcurrentCalls: 100
+        maxWaitDuration: 10ms
+
+  thread-pool-bulkhead:
+    configs:
+      default:
+        maxThreadPoolSize: 4
+        coreThreadPoolSize: 2
+        queueCapacity: 2
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
