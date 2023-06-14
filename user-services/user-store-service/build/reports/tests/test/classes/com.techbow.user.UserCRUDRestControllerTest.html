@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserCRUDRestControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserCRUDRestControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.techbow.user.html">com.techbow.user</a> &gt; UserCRUDRestControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.203s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testCreateUserInvocation()</td>
+<td class="success">0.203s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>23:52:45.763 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+23:52:45.771 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+23:52:45.803 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.techbow.user.UserCRUDRestControllerTest] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+23:52:45.810 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.techbow.user.UserCRUDRestControllerTest], using SpringBootContextLoader
+23:52:45.814 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.techbow.user.UserCRUDRestControllerTest]: class path resource [com/techbow/user/UserCRUDRestControllerTest-context.xml] does not exist
+23:52:45.814 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.techbow.user.UserCRUDRestControllerTest]: class path resource [com/techbow/user/UserCRUDRestControllerTestContext.groovy] does not exist
+23:52:45.814 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.techbow.user.UserCRUDRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+23:52:45.815 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.techbow.user.UserCRUDRestControllerTest]: UserCRUDRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:52:45.867 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.techbow.user.UserCRUDRestControllerTest]
+23:52:45.914 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [G:\techbow\techbow_services\user-services\user-store-service\build\classes\java\main\com\techbow\user\UserStoreApp.class]
+23:52:45.915 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.techbow.user.UserStoreApp for test class com.techbow.user.UserCRUDRestControllerTest
+23:52:45.917 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [com.techbow.user.UserCRUDRestControllerTest]: using defaults.
+23:52:45.917 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+23:52:45.927 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@117e0fe5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18a3962d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@78aea4b9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a65bb85, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b85880b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f936da8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4215838f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@452ba1db, org.springframework.test.context.event.EventPublishingTestExecutionListener@2289aca5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@76a36b71, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@184497d1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f9d87b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6ffab045, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@26fb628, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3e2943ab]
+23:52:45.930 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3e2822 testClass = UserCRUDRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@79e18e38 testClass = UserCRUDRestControllerTest, locations = '{}', classes = '{class com.techbow.user.UserStoreApp}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@4cf8b2dc, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1b2c4efb, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@b9563edd, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@28fdb0e1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4a11eb84, [ImportsContextCustomizer@29a60c27 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@75b25825, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3a3e4aff, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@f152dc69, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+?[2m2022-11-29 23:52:46.664?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.t.user.UserCRUDRestControllerTest     ?[0;39m ?[2m:?[0;39m Starting UserCRUDRestControllerTest using Java 17.0.5 on DESKTOP-B81PDD3 with PID 22576 (started by gaoji in G:\techbow\techbow_services\user-services\user-store-service)
+?[2m2022-11-29 23:52:46.665?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.t.user.UserCRUDRestControllerTest     ?[0;39m ?[2m:?[0;39m No active profile set, falling back to 1 default profile: &quot;default&quot;
+?[2m2022-11-29 23:52:46.679?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.c.c.c.ConfigServerConfigDataLoader  ?[0;39m ?[2m:?[0;39m Fetching config from server at : http://localhost:8081/
+?[2m2022-11-29 23:52:46.679?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.c.c.c.ConfigServerConfigDataLoader  ?[0;39m ?[2m:?[0;39m Connect Timeout Exception on Url - http://localhost:8081/. Will be trying the next url if available
+?[2m2022-11-29 23:52:46.679?[0;39m ?[33m WARN [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.c.c.c.ConfigServerConfigDataLoader  ?[0;39m ?[2m:?[0;39m Could not locate PropertySource ([ConfigServerConfigDataResource@77b919a3 uris = array&lt;String&gt;['http://localhost:8081/'], optional = true, profiles = list['default']]): I/O error on GET request for &quot;http://localhost:8081/user-store-service/default&quot;: Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+?[2m2022-11-29 23:52:47.910?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.b.a.w.s.WelcomePageHandlerMapping   ?[0;39m ?[2m:?[0;39m Adding welcome page: class path resource [static/index.html]
+?[2m2022-11-29 23:52:48.224?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.b.t.m.w.SpringBootMockServletContext?[0;39m ?[2m:?[0;39m Initializing Spring TestDispatcherServlet ''
+?[2m2022-11-29 23:52:48.224?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Initializing Servlet ''
+?[2m2022-11-29 23:52:48.225?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Completed initialization in 1 ms
+?[2m2022-11-29 23:52:48.257?[0;39m ?[32m INFO [user-store-service,,]?[0;39m ?[35m22576?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.t.user.UserCRUDRestControllerTest     ?[0;39m ?[2m:?[0;39m Started UserCRUDRestControllerTest in 2.294 seconds (JVM running for 3.159)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Nov 29, 2022, 11:52:48 PM</p>
+</div>
+</div>
+</body>
+</html>

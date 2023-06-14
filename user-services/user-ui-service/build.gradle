@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'io.freefair.lombok' version '6.5.0.2'
+}
+
+group = 'com.techbow'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+apply from: "G:/techbow/techbow_services/service-common.gradle"
+apply from: "G:/techbow/techbow_services/service-core.gradle"
+
+configurations {
+    frontEndResourceArtifact
+}
+task unpackageFrontEndArtifact(type: Copy) {
+    dependsOn configurations.frontEndResourceArtifact
+    from {
+        configurations.frontEndResourceArtifact.collect { zipTree(it) }
+    }
+    into("${project.buildDir}/resources/main")
+}
+processResources.finalizedBy unpackageFrontEndArtifact
+dependencies {
+    frontEndResourceArtifact project(':user-services:user-ui-frontend')
+}
+
+
+dependencies {
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
