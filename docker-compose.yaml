@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  zipkin:
+    container_name: com.techbow.zipkin
+    image: openzipkin/zipkin
+    ports:
+      - 8083:8090
+      - 8084:9411
+
+  redis:
+    container_name: com.techbow.redis
+    image: redis
+    ports:
+      - 8088:6379
+
+  prometheus:
+    container_name: com.techbow.prometheus
+    image: prom/prometheus
+    ports:
+      - 8089:9090
+    volumes:
+      - G:/techbow/techbow_services/service-configs/prometheus.yaml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    container_name: com.techbow.grafana
+    image: grafana/grafana
+    ports:
+      - 8090:3000
+    volumes:
+      - G:/techbow/techbow_services/service-configs/graphana.ini:/usr/local/etc/grafana/grafana.ini
+
+

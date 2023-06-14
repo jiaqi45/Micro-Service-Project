@@ -1,0 +1,18 @@
+pluginManagement {
+	repositories {
+		maven { url 'https://repo.spring.io/milestone' }
+		maven { url 'https://repo.spring.io/snapshot' }
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'techbow_services'
+include 'user-services:user-store-service'
+include 'user-services:user-ui-frontend'
+include 'config-service'
+include 'discovery-service'
+include 'gateway-service'
+include 'user-services:user-i18n-service'
+findProject(':user-services:user-i18n-service')?.name = 'user-i18n-service'
+include 'user-services:user-ui-service'
+findProject(':user-services:user-ui-service')?.name = 'user-ui-service'
+
